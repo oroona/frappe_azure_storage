@@ -106,23 +106,32 @@ app_license = "MIT"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"frappe_azure_storage.tasks.all"
-# 	],
-# 	"daily": [
-# 		"frappe_azure_storage.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"frappe_azure_storage.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"frappe_azure_storage.tasks.weekly"
-# 	]
-# 	"monthly": [
-# 		"frappe_azure_storage.tasks.monthly"
-# 	]
-# }
+scheduler_events = {
+	"all": [
+		# "frappe_azure_storage.tasks.all"
+	],
+	"daily": [
+		# "frappe_azure_storage.tasks.daily"
+	],
+	"hourly": [
+		# "frappe_azure_storage.tasks.hourly"
+	],
+	"weekly": [
+		# "frappe_azure_storage.tasks.weekly"
+	],
+	"monthly": [
+		# "frappe_azure_storage.tasks.monthly"
+	],
+	"daily_long": [
+		"frappe_azure_storage.frappe_azure_storage.doctype.azure_storage_settings.azure_storage_settings.take_backups_daily"
+	],
+	"weekly_long": [
+		"frappe_azure_storage.frappe_azure_storage.doctype.azure_storage_settings.azure_storage_settings.take_backups_weekly"
+	],
+	"monthly_long": [
+		"frappe_azure_storage.frappe_azure_storage.doctype.azure_storage_settings.azure_storage_settings.take_backups_monthly"
+	]
+}
 
 # Testing
 # -------

@@ -31,9 +31,9 @@ class AzureStorageSettings(Document):
 
 @frappe.whitelist()
 def take_backup():
-	"""Enqueue longjob for taking backup to s3"""
+	"""Enqueue long job for taking backup to Azure"""
 	enqueue(
-		"frappe.integrations.doctype.s3_backup_settings.s3_backup_settings.take_backups_s3",
+		"frappe_azure_storage.frappe_azure_storage.doctype.azure_storage_settings.azure_storage_settings.take_backups_azure",
 		queue="long",
 		timeout=1500,
 	)

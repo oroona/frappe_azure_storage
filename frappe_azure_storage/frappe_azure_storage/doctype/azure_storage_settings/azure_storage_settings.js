@@ -6,9 +6,9 @@ frappe.ui.form.on('Azure Storage Settings', {
 		frm.add_custom_button(__('Take Backup Now'), function(){
 			frm.dashboard.set_headline_alert("Azure Backup Started!");
 			frappe.call({
-				method: 'back_up_azure',
-				doc: frm.doc,
-				// method: 'frappe_azure_storage.frappe_azure_storage.doctype.azure_storage_settings.azure_storage_settings.take_backups_azure',
+				// method: 'back_up_azure',
+				// doc: frm.doc,
+				method: 'frappe_azure_storage.frappe_azure_storage.doctype.azure_storage_settings.azure_storage_settings.take_backups_azure',
 				// freeze: true,
 				// freeze_message: __("Testing..."),
 				callback: function(r) {
