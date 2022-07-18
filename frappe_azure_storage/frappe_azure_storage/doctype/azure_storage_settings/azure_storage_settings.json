@@ -124,7 +124,7 @@
     "modified": "2022-07-03 14:22:26.495755",
     "modified_by": "Administrator",
     "module": "Frappe Azure Storage",
-    "name": "Azure Storage Setting",
+    "name": "Azure Storage Settings",
     "owner": "Administrator",
     "permissions": [
      {
