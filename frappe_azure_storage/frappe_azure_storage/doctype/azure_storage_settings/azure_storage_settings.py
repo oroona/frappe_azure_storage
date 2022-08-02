@@ -154,33 +154,3 @@ def upload_file_to_azure(filename, folder, conn):
 	except Exception as e:
 		frappe.log_error()
 		print("Error uploading: %s" % (e))
-
-# def downloadable_backups(container_client):
-# 	path = get_site_path("private", "backups")
-# 	beYouLogger.debug(path)
-# 	files = [x for x in os.listdir(path) if os.path.isfile(os.path.join(path, x))]
-# 	beYouLogger.debug(files)
-# 	backups(path, files, container_client)
-
-# def backups(site_path, files, container_client):
-# 	backup_paths = []
-# 	for f in files:
-# 		if f.endswith("sql.gz"):
-# 			_path = os.path.abspath(os.path.join(site_path, f))
-# 			backup_paths.append(_path)
-
-# 	backup_paths = sorted(backup_paths, key=os.path.getctime)
-# 	beYouLogger.debug(backup_paths)
-# 	files = len(backup_paths)
-# 	beYouLogger.debug(files)
-# 	for idx in range(0, files):
-# 		f = os.path.basename(backup_paths[idx])
-# 		beYouLogger.debug(backup_paths[idx])
-# 		beYouLogger.debug(f)
-# 		# Instantiate a new BlobClient
-# 		blob_client = container_client.get_blob_client(f"backup/{f}")
-
-# 		# [START upload_a_blob]
-# 		# Upload content to block blob
-# 		with open(backup_paths[idx], "rb") as data:
-# 			blob_client.upload_blob(data, blob_type="BlockBlob")
